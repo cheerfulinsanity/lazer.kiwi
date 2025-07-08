@@ -1,0 +1,9 @@
+﻿.DS_Store
+Thumbs.db
+node_modules/
+build/
+dist/
+.svelte-kit/
+.netlify/
+*.log
+.env
