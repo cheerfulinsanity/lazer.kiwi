@@ -1,0 +1,23 @@
+name: Repo Visualizer
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Generate Repo Structure SVG
+        uses: githubocto/repo-visualizer@0.9.0
+        with:
+          output_file: structure.svg
+          excluded_paths: |
+            node_modules
+            .svelte-kit
+            build
+            .git
